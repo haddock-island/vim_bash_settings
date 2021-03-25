@@ -1,0 +1,70 @@
+a src='source ~/.bashrc; source ~/.vimrc'
+a gv='/usr/bin/gvim'
+a vig='gvim --remote'
+a bt='ctags -R * --extra=+q --fields=+i -n'
+a ex='exit'
+a mv='mv -i'
+a ..='cd ..'
+
+#Git Aliases
+a gs='git status -uno'  #Git status without showing untracked files
+a gp='git pull'
+a gcm='git checkout master'
+a gpom='git pull origin master'
+a ga='git add -u :/'
+a gc='git commit -m'
+a gf='git fetch'
+a gba='git branch -a'
+a gbr='git branch -r'
+a gph='git push'
+a gpoh='git push origin head'
+a gst='git stash'
+a gsta='git stash apply'
+a gdt='git difftool -d -t=meld &'
+a gdtb='git difftool -d -t=meld master &' #Diff the currently checkedout Branch against master
+a gmt='git mergetool &'
+a count='find . -type f | wc -l'    # Count the number of file in the dir
+
+# Ambiq Aliases
+a queue='cls; bqueues'
+a clean_all='make clean; make clean_all; make clean_all BUILD_DIR=.gatesim_dsp'
+a clean='clean_all; clean_all';
+a ms='make sanity';
+a mss='make super_sanity';
+a cb_z='git clone /projects/git/zr1.git digital; cd digital; bt'
+a cb_a='git clone /projects/git/falcon.git digital; cd digital; bt'
+a cb_b='git clone /projects/git/falconB.git digital; cd digital; bt'
+a cb_c='git clone /projects/git/falconC.git digital; cd digital; bt'
+a mb='make build'
+a p3='cd /projects3/falcon/work/hravikumar/; ls'
+a p4='cd /projects4/falcon/work/hravikumar/; ls'
+
+# Navigate to directories
+a b0='cd /projects3/falcon/work/hravikumar/b0_falcon/digital/'
+a b1='cd /projects3/falcon/work/hravikumar/b1_falcon/digital/'
+a b2='cd /projects3/falcon/work/hravikumar/b2_falcon/digital/'
+a b3='cd /projects3/falcon/work/hravikumar/b3_falcon/digital/'
+a b4='cd /projects3/falcon/work/hravikumar/b4_falcon/digital/'
+a b5='cd /projects3/falcon/work/hravikumar/b5_gatesim/digital/'
+a b6='cd /projects3/falcon/work/hravikumar/b6_falcon/digital/'
+a b7='cd /projects3/falcon/work/hravikumar/b7_falcon/digital/'
+a b8='cd /projects3/falcon/work/hravikumar/b8_falcon/digital/'
+a eco='cd /projects3/falcon/work/common/falcon_revB_ECOs/digital/impl/MCU_TOP_20200801_ecoChris/ECO/'
+a b1eco='cd /projects3/falcon/work/common/falcon_revB_ECOs/digital/impl/MCU_TOP_revB1/ECO/'
+
+# ZR1 aliases
+a zr1='cd /projects2/zr1/work/hravikumar/zr1_0/digital'
+a ecozr1='cd /projects2/stingray/work/common/stingray_final_synth/digital/impl/MCU_5_19_2019_v2/ECO'
+
+# Tempus
+a tempus='tempus -log ./logs -files ../../pd_scripts/ambiq_scripts/load_tempus.tcl'
+a src_tempus='source  ../../pd_scripts/ambiq_scripts/load_tempus.tcl'
+
+# LEC
+a lec='lec -lp -gui'
+
+# Install Vim plugins
+a plugin='vim +PluginInstall +qall'
+
+# Timer regressions tests
+a tmra='../bin/run_tests.pl -testlist=regressions/TMRA.tests -build=0 -gates -build_dir=.gatesim_dsp -random'
